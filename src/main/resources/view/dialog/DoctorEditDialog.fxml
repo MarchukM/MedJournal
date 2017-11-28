@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="580.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.medjournal.controller.dialog.DoctorEditDialogController">
+   <children>
+      <Label layoutX="10.0" layoutY="14.0" text="Общая информация:">
+         <effect>
+            <Blend />
+         </effect>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="12.0" layoutY="45.0" prefHeight="126.0" prefWidth="760.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="28.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="254.40001525878907" minWidth="10.0" prefWidth="163.1999725341797" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="446.40002746582036" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="48.000006103515624" minHeight="10.0" prefHeight="27.199993896484372" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="56.000003051757815" minHeight="10.0" prefHeight="28.80000610351563" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="36.79999389648438" minHeight="9.599996948242193" prefHeight="36.79999389648438" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Имя" />
+            <Label text="Фамилия" GridPane.rowIndex="1" />
+            <Label text="Специальность" GridPane.rowIndex="2" />
+            <TextField fx:id="firstName" promptText="Василий" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="lastName" promptText="Пупкин" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="speciality" promptText="Терапевт" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <Label layoutX="10.0" layoutY="192.0" text="Расписание:">
+         <effect>
+            <Blend />
+         </effect>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="10.0" layoutY="222.0" prefHeight="316.0" prefWidth="780.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints />
+          <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Понедельник" GridPane.rowIndex="2" />
+            <Label text="Вторник" GridPane.rowIndex="3" />
+            <Label text="Среда" GridPane.rowIndex="4" />
+            <Label text="Четверг" GridPane.rowIndex="5" />
+            <Label text="Пятница" GridPane.rowIndex="6" />
+            <Label text="Суббота" GridPane.rowIndex="7" />
+            <Label text="Воскресенье" GridPane.rowIndex="8" />
+            <Label text="День недели" GridPane.rowIndex="1">
+               <effect>
+                  <Blend />
+               </effect>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="186.0" text="Часы приема" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <effect>
+                  <Blend />
+               </effect>
+            </Label>
+            <Label text="Кабинет" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <effect>
+                  <Blend />
+               </effect>
+            </Label>
+            <Label text="C" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="mondayFrom" maxWidth="62.0" prefHeight="26.0" prefWidth="62.0" promptText="hh:mm" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="До" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="100.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="mondayTo" maxWidth="62.0" prefHeight="26.0" prefWidth="62.0" promptText="hh:mm" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="130.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Каб. №" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField fx:id="mondayRoom" maxWidth="62.0" prefHeight="26.0" prefWidth="62.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="70.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="C" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="tuesdayFrom" maxWidth="62.0" prefHeight="26.0" prefWidth="62.0" promptText="hh:mm" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="До" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="100.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="tuesdayTo" maxWidth="62.0" prefHeight="26.0" prefWidth="62.0" promptText="hh:mm" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="130.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="C" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="wednesdayFrom" maxWidth="62.0" prefHeight="26.0" prefWidth="62.0" promptText="hh:mm" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="До" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="100.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="wednesdayTo" maxWidth="62.0" prefHeight="26.0" prefWidth="62.0" promptText="hh:mm" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="130.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="C" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="thursdayFrom" maxWidth="62.0" prefHeight="26.0" prefWidth="62.0" promptText="hh:mm" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="До" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="100.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="thursdayTo" maxWidth="62.0" prefHeight="26.0" prefWidth="62.0" promptText="hh:mm" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="130.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="C" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="fridayFrom" maxWidth="62.0" prefHeight="26.0" prefWidth="62.0" promptText="hh:mm" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="До" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="100.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="fridayTo" maxWidth="62.0" prefHeight="26.0" prefWidth="62.0" promptText="hh:mm" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="130.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="C" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField fx:id="saturdayFrom" maxWidth="62.0" prefHeight="26.0" prefWidth="62.0" promptText="hh:mm" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="До" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets left="100.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="saturdayTo" maxWidth="62.0" prefHeight="26.0" prefWidth="62.0" promptText="hh:mm" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets left="130.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="C" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <TextField fx:id="sundayFrom" maxWidth="62.0" prefHeight="26.0" prefWidth="62.0" promptText="hh:mm" GridPane.columnIndex="1" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="До" GridPane.columnIndex="1" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets left="100.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="sundayTo" maxWidth="62.0" prefHeight="26.0" prefWidth="62.0" promptText="hh:mm" GridPane.columnIndex="1" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets left="130.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Каб. №" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <TextField fx:id="tuesdayRoom" maxWidth="62.0" prefHeight="26.0" prefWidth="62.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="70.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Каб. №" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <TextField fx:id="wednesdayRoom" maxWidth="62.0" prefHeight="26.0" prefWidth="62.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="70.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Каб. №" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <TextField fx:id="thursdayRoom" maxWidth="62.0" prefHeight="26.0" prefWidth="62.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="70.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Каб. №" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <TextField fx:id="fridayRoom" maxWidth="62.0" prefHeight="26.0" prefWidth="62.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="70.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Каб. №" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            <TextField fx:id="saturdayRoom" maxWidth="62.0" prefHeight="26.0" prefWidth="62.0" GridPane.columnIndex="2" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets left="70.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Каб. №" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+            <TextField fx:id="sundayRoom" maxWidth="62.0" prefHeight="26.0" prefWidth="62.0" GridPane.columnIndex="2" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets left="70.0" />
+               </GridPane.margin>
+            </TextField>
+         </children>
+      </GridPane>
+      <ButtonBar layoutX="395.0" layoutY="546.0" prefHeight="40.0" prefWidth="200.0">
+        <buttons>
+          <Button mnemonicParsing="false" onAction="#handleOk" text="Ok" />
+            <Button mnemonicParsing="false" onAction="#handleCancel" prefWidth="81.0" text="Cancel" />
+        </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>
