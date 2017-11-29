@@ -32,6 +32,7 @@ public class PatientEditDialogController {
     private TextArea recommendations;
 
 
+
     private boolean okClicked;
     private Stage dialogStage;
     private Patient patient;
@@ -90,6 +91,8 @@ public class PatientEditDialogController {
     private void handleCancel() {
         dialogStage.close();
     }
+
+
 
     public boolean isOkClicked() {
         return okClicked;

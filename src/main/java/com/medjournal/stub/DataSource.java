@@ -11,6 +11,8 @@ import javafx.collections.ObservableList;
 
 import java.time.DayOfWeek;
 import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class DataSource {
     private static DataSource instance;
@@ -117,6 +119,12 @@ public class DataSource {
                 .filter(doc -> doc.getFirstName().equals(firstName) && doc.getLastName().equals(lastName))
                 .findFirst()
                 .get();
+    }
+
+    public List<Patient> findPatient(String firstName, String lastName) {
+        return patients.stream()
+                .filter(patient -> patient.getFirstName().equals(firstName) && patient.getLastName().equals(lastName))
+                .collect(Collectors.toList());
     }
 
     public void clearData() {

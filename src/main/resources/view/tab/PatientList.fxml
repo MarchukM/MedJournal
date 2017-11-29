@@ -4,9 +4,10 @@
 <?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.medjournal.controller.tab.PatientListController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.medjournal.controller.tab.PatientListController">
    <children>
       <TableView fx:id="patientTable" layoutX="121.0" layoutY="39.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columns>
@@ -19,12 +20,14 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <ButtonBar layoutX="307.0" layoutY="350.0" prefHeight="40.0" prefWidth="317.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+      <ButtonBar layoutX="268.0" layoutY="372.0" prefHeight="40.0" prefWidth="317.0" AnchorPane.bottomAnchor="6.600000000000023" AnchorPane.rightAnchor="14.399999999999977">
         <buttons>
           <Button mnemonicParsing="false" onAction="#handleNewPatient" prefHeight="26.0" prefWidth="138.0" text="Добавить" />
             <Button mnemonicParsing="false" onAction="#handleDeletePatient" text="Удалить" />
             <Button mnemonicParsing="false" onAction="#handleShowNote" text="Справка" />
         </buttons>
       </ButtonBar>
+      <TextField fx:id="searchForm" layoutX="14.0" layoutY="393.0" />
+      <Button layoutX="209.0" layoutY="392.0" mnemonicParsing="false" onAction="#handleSearch" text="Поиск" />
    </children>
 </AnchorPane>

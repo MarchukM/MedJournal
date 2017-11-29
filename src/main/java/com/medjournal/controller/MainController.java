@@ -39,9 +39,9 @@ public class MainController {
         if (file != null) {
             if (!file.getPath().endsWith(".xml")) {
                 file = new File(file.getPath() + ".xml");
-                XMLInputOutputUtil.exportDataToXML(file);
             }
         }
+        XMLInputOutputUtil.exportDataToXML(file);
 
     }
 
